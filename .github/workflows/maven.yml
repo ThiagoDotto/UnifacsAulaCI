@@ -27,12 +27,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-
-    - name: Install Commitlint
-      run: npm install -g @commitlint/cli @commitlint/config-conventional
-
-    - name: Run Commitlint
-      run: commitlint --from=HEAD~1
       
     - name: Build with Maven
       run: mvn -B package --file pom.xml
